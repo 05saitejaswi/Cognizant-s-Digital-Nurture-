@@ -1,0 +1,20 @@
+<html>
+       <body>
+        Enter word/sentence to check for palindrome:<input type="text" name="palin" id="palin"><br>
+        <input type="submit" name="palinbtn" value="Check Palindrome" onclick="checkPalindrome()">
+        <script>
+            function checkPalindrome(){
+                var strValue=document.getElementById("palin").value;
+                var strValue=strValue.replace(/\s/g,"").toLowerCase();
+                var val= strValue.split('');
+                var final_result=val.reverse().join('');
+                if(strValue == final_result)
+                     alert("The entry is a palindrome.");
+                else
+                     alert("The entry is not a palindrome.");
+            }
+        </script>
+        
+    </body>
+    
+</html>
